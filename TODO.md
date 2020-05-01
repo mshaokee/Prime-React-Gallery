@@ -2,10 +2,10 @@
 
 
 ## SET UP
-[] -npm install
-[] -Create Gallery folders/files
-[] -Set up basic components
-[] -grab 6 photos
+[x] -npm install
+[x] -Create Gallery folders/files
+[x] -Set up basic components
+[x] -grab 6 photos
 
 ## GET / BASE
 [] -get function axios in app.js
