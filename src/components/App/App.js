@@ -15,14 +15,16 @@ class App extends Component {
     this.getImages();
   };//end componentDidMount
 
+  //likeMe should be singlePic in GalleryItem
   addLike = (likeMe) => {
-    console.log('clicked Like!');
+    console.log('clicked Like!', likeMe);
     let newLikes = likeMe.likes
     //Call PUT
     Axios({
       method: 'PUT',
       url: `./gallery/like/:id`
     }).then( response => {
+      console.log('HEY AXIOS RESPONSE', response);
       this.getImages();
     }).catch( error => {
       console.log(error);
