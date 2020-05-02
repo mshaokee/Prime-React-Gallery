@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 
 class GalleryItem extends Component {
 
-    
+    state = {
+        descriptionVisible: false
+    };//end state
 
     componentDidMount() {
         console.log('GalleryItem mounted');
@@ -10,10 +12,23 @@ class GalleryItem extends Component {
 
     handleClick = () => {
         console.log('clicking description');
-        
+        this.setState({
+            descriptionVisible: true
+        });//end setState
     };//end handleClick
 
     render() {
+        //log to test state on clicks
+        console.log('WHAT STATE AM I IN', this.state);
+        //letting our description be empty
+        let details;
+        //if statement, on click should change variable to our set stuff
+        if(this.state.descriptionVisible){
+            details = (
+                <h2>{this.props.singlePic.description}</h2>
+            )
+        };//end if
+
         return (
             <>
                 {/* render images */}
@@ -25,7 +40,7 @@ class GalleryItem extends Component {
                 />
                 <button onClick={this.handleClick}>Description</button>
                 {/* if user clicks, show description */}
-
+                {details}
 
             </>
         );//end return
