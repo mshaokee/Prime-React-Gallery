@@ -15,6 +15,20 @@ class App extends Component {
     this.getImages();
   };//end componentDidMount
 
+  addLike = () => {
+    console.log('clicked Like!');
+    //Call PUT
+    Axios({
+      method: 'PUT',
+      url: `./gallery/like/:id`
+    }).then( response => {
+      this.getImages();
+    }).catch( error => {
+      console.log(error);
+      alert('Error in Axios PUT')
+    });//end axios
+  };//end addLike
+
   getImages = () =>  {
     console.log('in getImages');
     //call GET axios from "DB"
@@ -42,7 +56,9 @@ class App extends Component {
         <br/>
         {/* call GalleryList to DOM */}
         {/* give props targeting images which should now have our gallery */}
-        <GalleryList pictures={this.state.images}/>
+        <GalleryList pictures={this.state.images}
+                     
+        />
       </div>
     );
   }

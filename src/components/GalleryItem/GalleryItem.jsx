@@ -17,6 +17,8 @@ class GalleryItem extends Component {
         });//end setState
     };//end handleClick
 
+
+
     render() {
         //log to test state on clicks
         console.log('WHAT STATE AM I IN', this.state);
@@ -42,7 +44,6 @@ class GalleryItem extends Component {
             );//end details
         };//end if
 
-
         return (
             <>
                 {/* render images */}
@@ -50,7 +51,6 @@ class GalleryItem extends Component {
                 {/* likes */}
                 <p>Likes: {this.props.singlePic.likes}</p>
                 <button>Add Like</button>
-
             </>
         );//end return
     };//end render

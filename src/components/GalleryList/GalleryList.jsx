@@ -15,7 +15,9 @@ class GalleryList extends Component{
                 {/* map, for each photo. return photos. */}
                 {this.props.pictures.map( (photo, index)=>
                 <div key={index}>
-                    <GalleryItem singlePic={photo}/>
+                    <GalleryItem singlePic={photo}
+              
+                    />
                 </div>)}
             </>
         );//end return
