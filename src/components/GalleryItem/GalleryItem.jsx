@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class GalleryItem extends Component {
 
     state = {
-        descriptionVisible: false
+        descriptionVisible: false //setting to false doesn't show our info first
     };//end state
 
     componentDidMount() {
@@ -13,7 +13,7 @@ class GalleryItem extends Component {
     handleClick = () => {
         console.log('clicking description');
         this.setState({
-            descriptionVisible: true
+            descriptionVisible: !this.state.descriptionVisible //this way it can toggle, opposite of state
         });//end setState
     };//end handleClick
 
