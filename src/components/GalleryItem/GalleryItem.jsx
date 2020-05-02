@@ -23,24 +23,33 @@ class GalleryItem extends Component {
         //letting our description be empty
         let details;
         //if statement, on click should change variable to our set stuff
-        if(this.state.descriptionVisible){
+        if(!this.state.descriptionVisible){
             details = (
-                <h2>{this.props.singlePic.description}</h2>
-            )
-        };//end if
-
-        return (
-            <>
-                {/* render images */}
                 <img
+                    onClick={this.handleClick}
                     className="photo"
                     key={this.props.singlePic.id}
                     src={this.props.singlePic.path}
                     alt={this.props.singlePic.description}
                 />
-                <button onClick={this.handleClick}>Description</button>
-                {/* if user clicks, show description */}
-                {details}
+            )
+        } else if (this.state.descriptionVisible){
+            details = (
+                <>
+                <h2>{this.props.singlePic.description}</h2>
+                <button onClick={this.handleClick}>View Image</button>
+                </>
+            );//end details
+        };//end if
+
+
+        return (
+            <>
+                {/* render images */}
+                <span>{details}</span>
+                {/* likes */}
+                <p>Likes: {this.props.singlePic.likes}</p>
+                <button>Add Like</button>
 
             </>
         );//end return

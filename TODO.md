@@ -17,7 +17,11 @@
     [x] -maps through images
 [x] -GalleryList to display images through props
     [x] -call photos through props again, must have key
-[] -clicks => swaps image to description (conditional rendering)
+[x] -clicks => swaps image to description (conditional rendering)
+    [x] -make button description and handleClick func
+    [x] -state that sets description to false
+    [x] -setState in handleClick, opposite of state. that way it can toggle back and forth
+    [x] -create detail variable, if statement, do details which will render description
 [] -include likes and like button
 [] -like button click = PUT axios `/gallery/like/:id`
 [] -update gallery when like clicked
