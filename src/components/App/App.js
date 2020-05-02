@@ -15,19 +15,22 @@ class App extends Component {
     this.getImages();
   };//end componentDidMount
 
-  addLike = () => {
-    console.log('clicked Like!');
-    //Call PUT
-    Axios({
-      method: 'PUT',
-      url: `./gallery/like/:id`
-    }).then( response => {
-      this.getImages();
-    }).catch( error => {
-      console.log(error);
-      alert('Error in Axios PUT')
-    });//end axios
-  };//end addLike
+  // addLike = (like) => {
+  //   console.log('clicked Like!');
+  //   let addLikes = like.likes;
+  //   addLikes += 1;
+  //   //Call PUT
+  //   Axios({
+  //     method: 'PUT',
+  //     url: `./gallery/like/:id`,
+  //     data: 
+  //   }).then( response => {
+  //     this.getImages();
+  //   }).catch( error => {
+  //     console.log(error);
+  //     alert('Error in Axios PUT')
+  //   });//end axios
+  // };//end addLike
 
   getImages = () =>  {
     console.log('in getImages');
