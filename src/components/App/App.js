@@ -15,8 +15,9 @@ class App extends Component {
     this.getImages();
   };//end componentDidMount
 
-  addLike = () => {
+  addLike = (likeMe) => {
     console.log('clicked Like!');
+    let newLikes = likeMe.likes
     //Call PUT
     Axios({
       method: 'PUT',
@@ -57,7 +58,8 @@ class App extends Component {
         {/* call GalleryList to DOM */}
         {/* give props targeting images which should now have our gallery */}
         <GalleryList pictures={this.state.images}
-                     
+        // pass down function to GalleryItem
+                     addLike={this.addLike}
         />
       </div>
     );
