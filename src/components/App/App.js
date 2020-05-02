@@ -4,7 +4,12 @@ import GalleryList from '../GalleryList/GalleryList'
 import Axios from 'axios';
 
 class App extends Component {
+  //create state to hold empty array, will hold gallery
+  state = {
+    images: []
+  }
 
+  //will always re-render
   componentDidMount(){
     console.log('in componentDidMount');
     this.getImages();
@@ -12,11 +17,16 @@ class App extends Component {
 
   getImages = () =>  {
     console.log('in getImages');
+    //call GET axios from "DB"
     Axios({
       method: 'GET',
       url: '/gallery'
     }).then((response) =>{
+      //we want data from our response, then put inside of our empty array
       console.log(response.data);
+      this.setState({
+        images: response.data
+      })
     }).catch((error) => {
       console.log(error);
       alert('Error. Check Console')
@@ -30,7 +40,9 @@ class App extends Component {
           <h1 className="App-title">Gallery of my life</h1>
         </header>
         <br/>
-        <GalleryList />
+        {/* call GalleryList to DOM */}
+        {/* give props targeting images which should now have our gallery */}
+        <GalleryList pictures={this.state.images}/>
       </div>
     );
   }
