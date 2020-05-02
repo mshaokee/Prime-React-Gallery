@@ -7,7 +7,7 @@ class GalleryItem extends Component {
 
     render() {
         return (
-            <h1>yo</h1>
+            <h1>TEST</h1>
         );//end return
     };//end render
 };//end class
