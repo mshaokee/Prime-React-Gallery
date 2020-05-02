@@ -7,9 +7,17 @@ class GalleryItem extends Component {
 
     render() {
         return (
-            <h1>TEST ITEM</h1>
+            <>
+            <img
+                className="photo"
+                key={this.props.singlePic.id}
+                src={this.props.singlePic.path}
+                alt={this.props.singlePic.description}
+            />
+            </>
         );//end return
     };//end render
 };//end class
 
 export default GalleryItem;
+

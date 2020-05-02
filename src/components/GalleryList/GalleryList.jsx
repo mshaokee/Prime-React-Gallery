@@ -13,13 +13,7 @@ class GalleryList extends Component{
                 {/* test to see if array is working properly! */}
                 {/* <h1>TEST{JSON.stringify(this.props.pictures)}</h1> */}
                 {/* map, for each photo. return photos. */}
-                {this.props.pictures.map( (photo)=><img 
-                 className="photo" 
-                 key={photo.id}
-                 src={photo.path} 
-                 alt={photo.description}
-                />)}
-                <GalleryItem />
+                {this.props.pictures.map( (photo, index)=><div key={index}><GalleryItem singlePic={photo}/></div>)}
             </div>
         );//end return
     };//end render
