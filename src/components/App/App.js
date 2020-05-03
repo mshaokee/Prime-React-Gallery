@@ -15,22 +15,25 @@ class App extends Component {
     this.getImages();
   };//end componentDidMount
 
-  // addLike = (like) => {
-  //   console.log('clicked Like!');
-  //   let addLikes = like.likes;
-  //   addLikes += 1;
-  //   //Call PUT
-  //   Axios({
-  //     method: 'PUT',
-  //     url: `./gallery/like/:id`,
-  //     data: 
-  //   }).then( response => {
-  //     this.getImages();
-  //   }).catch( error => {
-  //     console.log(error);
-  //     alert('Error in Axios PUT')
-  //   });//end axios
-  // };//end addLike
+  //likeMe should be singlePic in GalleryItem
+  addLike = (likeMe) => {
+    console.log('clicked Like!', likeMe);
+    let newLikes = likeMe.likes
+    if (likeMe){
+      newLikes += 1
+    }
+    //Call PUT
+    Axios({
+      method: 'PUT',
+      url: `/gallery/like/${likeMe.id}`
+    }).then( response => {
+      console.log('HEY AXIOS RESPONSE', newLikes);
+      this.getImages();
+    }).catch( error => {
+      console.log(error);
+      alert('Error in Axios PUT')
+    });//end axios
+  };//end addLike
 
   getImages = () =>  {
     console.log('in getImages');
@@ -60,7 +63,8 @@ class App extends Component {
         {/* call GalleryList to DOM */}
         {/* give props targeting images which should now have our gallery */}
         <GalleryList pictures={this.state.images}
-                     
+        // pass down function to GalleryItem
+                     addLike={this.addLike}
         />
       </div>
     );

@@ -16,7 +16,8 @@ class GalleryList extends Component{
                 {this.props.pictures.map( (photo, index)=>
                 <div key={index}>
                     <GalleryItem singlePic={photo}
-              
+                    // pass addLike function down
+                                 addLike={this.props.addLike}
                     />
                 </div>)}
             </>
