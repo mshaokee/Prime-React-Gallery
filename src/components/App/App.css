@@ -59,6 +59,19 @@
   margin: 5px;
   font-size: 28px;
 }
+/* 
+.container {
+  margin: 5px
+}
+.container ul {
+  color: #DCDCDC;
+}
+
+.container ul li {
+  float: left;
+  width: 100px;
+  height: 70px;
+} */
 
 /* .row {
   display: flex;
