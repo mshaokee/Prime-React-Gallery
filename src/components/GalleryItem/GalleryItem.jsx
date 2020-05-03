@@ -51,7 +51,7 @@ class GalleryItem extends Component {
                 {/* render images */}
                 <span>{details}</span>
                 {/* likes */}
-                <p>Likes: {this.props.singlePic.likes}</p>
+                <p>Likes: {photo.likes}</p>
                 {/* call addLike function being passed down */}
                 {/* <button onClick={this.props.addLike}>Add Like</button> */}
                 <button onClick={ () => this.props.addLike(photo)}>Add Like</button>

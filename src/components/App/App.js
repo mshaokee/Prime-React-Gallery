@@ -19,12 +19,15 @@ class App extends Component {
   addLike = (likeMe) => {
     console.log('clicked Like!', likeMe);
     let newLikes = likeMe.likes
+    if (likeMe){
+      newLikes += 1
+    }
     //Call PUT
     Axios({
       method: 'PUT',
-      url: `./gallery/like/:id`
+      url: `/gallery/like/${likeMe.id}`
     }).then( response => {
-      console.log('HEY AXIOS RESPONSE', response);
+      console.log('HEY AXIOS RESPONSE', newLikes);
       this.getImages();
     }).catch( error => {
       console.log(error);
