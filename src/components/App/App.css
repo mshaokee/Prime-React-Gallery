@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #DCDCDC;
 }
 
 .App-header {
@@ -27,3 +28,42 @@
   height: 250px;
   size: 250px;
 }
+
+.desc {
+  color:#DCDCDC;
+  height: 200px;
+  width: 300px;
+  margin: auto;
+  border: 1px solid black;
+  background-color: #222;
+}
+
+.btn {
+  width: 100px;
+  height: 35px;
+  font-size: 15px;
+  font-weight: 500px;
+  box-shadow: 4px 5px 20px;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #DCDCDC;
+   transform: translateY(2px);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+}
+
+.like {
+  margin: 5px;
+  font-size: 28px;
+}
+
+/* .row {
+  display: flex;
+} */
+
+/* .column {
+  flex: 33.33%
+} */

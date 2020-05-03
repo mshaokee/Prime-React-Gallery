@@ -29,7 +29,7 @@ class GalleryItem extends Component {
             details = (
                 <img
                     onClick={this.handleClick}
-                    className="photo"
+                    className="photo column"
                     key={this.props.singlePic.id}
                     src={this.props.singlePic.path}
                     alt={this.props.singlePic.description}
@@ -38,8 +38,8 @@ class GalleryItem extends Component {
         } else if (this.state.descriptionVisible){
             details = (
                 <>
-                <h2>{this.props.singlePic.description}</h2>
-                <button onClick={this.handleClick}>View Image</button>
+                <h2 className="desc column">{this.props.singlePic.description}</h2>
+                <button className="btn" onClick={this.handleClick}>View Image</button>
                 </>
             );//end details
         };//end if
@@ -49,12 +49,11 @@ class GalleryItem extends Component {
         return (
             <>
                 {/* render images */}
-                <span>{details}</span>
+                <span className="row">{details}</span>
                 {/* likes */}
-                <p>Likes: {photo.likes}</p>
+                <p className="like">Likes: {photo.likes}</p>
                 {/* call addLike function being passed down */}
-                {/* <button onClick={this.props.addLike}>Add Like</button> */}
-                <button onClick={ () => this.props.addLike(photo)}>Add Like</button>
+                <button className="btn" onClick={ () => this.props.addLike(photo)}>Add Like</button>
             </>
         );//end return
     };//end render

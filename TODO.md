@@ -22,6 +22,8 @@
     [x] -state that sets description to false
     [x] -setState in handleClick, opposite of state. that way it can toggle back and forth
     [x] -create detail variable, if statement, do details which will render description
-[] -include likes and like button
-[] -like button click = PUT axios `/gallery/like/:id`
-[] -update gallery when like clicked
+[x] -include likes and like button
+[x] -like button click = PUT axios `/gallery/like/:id`
+    [] -create add like function
+    [] -path add like function all the way through Gallery List/Gallery Item
+[x] -update gallery when like clicked
