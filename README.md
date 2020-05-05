@@ -8,6 +8,7 @@ In this project we had to create a Gallery of photos, and when those photos are 
 ## Examples!
 
 ![](images/example1.png)
+![](images/example2.png)
 
 Your project description goes here. What problem did you solve? How did you solve it?
 
