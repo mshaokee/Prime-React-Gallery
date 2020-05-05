@@ -50,11 +50,13 @@ class GalleryItem extends Component {
             <>
             <div className="side">
                 {/* render images */}
-                <span className="container">{details}</span>
+                <div className="container">
+                <span>{details}</span>
                 {/* likes */}
                 <p className="like">Likes: {photo.likes}</p>
                 {/* call addLike function being passed down */}
                 <button className="btn" onClick={ () => this.props.addLike(photo)}>Add Like</button>
+                </div>
                 </div>
             </>
         );//end return

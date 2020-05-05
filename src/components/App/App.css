@@ -27,6 +27,7 @@
   margin: 20px;
   height: 250px;
   size: 250px;
+  max-width:100%;
 }
 
 .desc {
@@ -61,27 +62,11 @@
 }
 
 .side {
-  display: block;
-  margin: 20px;
+  width: 50%;
+  margin: auto;
 }
-/* 
+
 .container {
-  margin: 5px
-}
-.container ul {
-  color: #DCDCDC;
-}
-
-.container ul li {
+  width: 50%;
   float: left;
-  width: 100px;
-  height: 70px;
-} */
-
-/* .row {
-  display: flex;
-} */
-
-/* .column {
-  flex: 33.33%
-} */
+}
