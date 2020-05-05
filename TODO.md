@@ -24,6 +24,7 @@
     [x] -create detail variable, if statement, do details which will render description
 [x] -include likes and like button
 [x] -like button click = PUT axios `/gallery/like/:id`
-    [] -create add like function
-    [] -path add like function all the way through Gallery List/Gallery Item
+    [x] -create add like function
+    [x] -path add like function all the way through Gallery List/Gallery Item
+    [x] -must use another props that is being passed along into the function with parameters
 [x] -update gallery when like clicked

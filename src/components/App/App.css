@@ -59,6 +59,11 @@
   margin: 5px;
   font-size: 28px;
 }
+
+.side {
+  display: block;
+  margin: 20px;
+}
 /* 
 .container {
   margin: 5px

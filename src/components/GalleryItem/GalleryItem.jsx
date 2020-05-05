@@ -35,7 +35,7 @@ class GalleryItem extends Component {
                     alt={this.props.singlePic.description}
                 />
             )
-        } else if (this.state.descriptionVisible){
+        } else if (this.state.descriptionVisible){ //else statement for toggle of description
             details = (
                 <>
                 <h2 className="desc">{this.props.singlePic.description}</h2>
@@ -48,12 +48,14 @@ class GalleryItem extends Component {
 
         return (
             <>
+            <div className="side">
                 {/* render images */}
                 <span className="container">{details}</span>
                 {/* likes */}
                 <p className="like">Likes: {photo.likes}</p>
                 {/* call addLike function being passed down */}
                 <button className="btn" onClick={ () => this.props.addLike(photo)}>Add Like</button>
+                </div>
             </>
         );//end return
     };//end render

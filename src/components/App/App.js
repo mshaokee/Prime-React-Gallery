@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import GalleryList from '../GalleryList/GalleryList'
-import Axios from 'axios';
+import axios from 'axios';
 
 class App extends Component {
   //create state to hold empty array, will hold gallery
@@ -19,11 +19,8 @@ class App extends Component {
   addLike = (likeMe) => {
     console.log('clicked Like!', likeMe);
     let newLikes = likeMe.likes
-    if (likeMe){
-      newLikes += 1
-    }
     //Call PUT
-    Axios({
+    axios({
       method: 'PUT',
       url: `/gallery/like/${likeMe.id}`
     }).then( response => {
@@ -38,7 +35,7 @@ class App extends Component {
   getImages = () =>  {
     console.log('in getImages');
     //call GET axios from "DB"
-    Axios({
+    axios({
       method: 'GET',
       url: '/gallery'
     }).then((response) =>{
@@ -59,7 +56,7 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Gallery of my life</h1>
         </header>
-        <br/>
+       
         {/* call GalleryList to DOM */}
         {/* give props targeting images which should now have our gallery */}
         <GalleryList pictures={this.state.images}
@@ -67,8 +64,8 @@ class App extends Component {
                      addLike={this.addLike}
         />
       </div>
-    );
-  }
-}
+    );//end return
+  };//end render
+};//end class
 
 export default App;
